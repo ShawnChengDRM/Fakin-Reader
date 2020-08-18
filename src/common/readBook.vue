@@ -210,8 +210,12 @@
         let localShelf = JSON.parse(window.localStorage.getItem('bootPage')) ? JSON.parse(window.localStorage.getItem('bootPage')) : {};
         if (localShelf.bootPage) {
           this.bootPage = localShelf.bootPage
+
         } else {
           this.bootPage = 0;
+          console.info("首次进入:first");
+          this.pagingPattern = 1;
+          this.setUserLocalStorage();
         }
       },
       //引导页
