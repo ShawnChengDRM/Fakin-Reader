@@ -477,7 +477,7 @@
           let _book = JSON.stringify(books).replace(/^"|"$/g, '');
           this.loading = false;
           if (c.test(_book)) {
-            _book = '<p>' + _book.replace(/\s*/g, '').replace(/\\n/g, '</p><p>') + '</p>';
+            _book = '<p>' + _book.replace(/\s*/g, '').replace(/\\n/g, '</p><p>').replace(/\\r/g, '</p><p>') + '</p>';
             return _book
           } else {
             return 'vip章节，请购买或者换源阅读！' //换源功能已经实现
